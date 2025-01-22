@@ -57,3 +57,114 @@
   html {
     height: 100%;
   }
+  main {
+    height: 100%;
+    display: grid;
+  }
+  .bg-image__mobile-backup {
+    place-self: center;
+  }
+  .signup-form__text {
+    padding: 2rem;
+    font-family: var(--ff-main);
+    font-size: var(--ff-size);
+    font-weight: var(--fw-mid);
+    color: var(--clr-CharcoalGrey);
+    word-spacing: 1px;
+  }
+  .signup-form__main-title {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 1rem;
+  }
+  .signup-form__description {
+    margin-bottom: 1rem;
+  }
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    display: grid;
+    gap: .5rem;
+}
+li {
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+}
+ul li::before {
+    content: url(/assets/images/icon-list.svg);
+}
+  .success-message__container {
+    display: none;
+  }
+  .form__min-flex {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  }
+  .form__grid {
+    display: grid;
+    gap: 1rem;
+  }
+  label {
+    color: black;
+    margin-top: 1rem;
+    font-size: .9rem;
+  }
+  input {
+    padding: 0.875rem;
+    padding-left: 1.5rem;
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.514);
+    cursor: pointer;
+  }
+  button {
+    padding: 0.875rem;
+    border-radius: .5rem;
+    background-color: var(--clr-DarkSlateGrey);
+    border: transparent;
+    color: white;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+  }
+  button:hover {
+    background: linear-gradient(to right, var(--clr-Tomato), rgb(255, 208, 0));
+  }
+  @media (min-width:375px) and (max-width:600px) {
+    .bg-image {
+        background-color: var(--clr-Tomato);
+        background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+      }
+      .bg-image__mobile-backup {
+       visibility: hidden;
+      }
+  }
+  @media (min-width:600px) {
+    html {
+        background-color: var(--clr-CharcoalGrey);
+    }
+    body {
+        height: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .signup-form__container {
+        padding: 1rem;
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        max-width: 680px;
+        background-color: white;
+        border-radius: 1rem;
+    }
+    .bg-image {
+        grid-column: 2;
+    }
+    .signup-form__text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+  }

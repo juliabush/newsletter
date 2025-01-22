@@ -11,34 +11,46 @@
  <script defer src="main.js"></script>
 </head>
 <body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
- 
+<main class="website__container">
+  
+    <!-- Sign-up form start -->
+  
+    <section class="signup-form__container">
+      <picture class="bg-image">
+        <source srcset="/assets/images/illustration-sign-up-desktop.svg" media="(min-width: 600px)" class="big">
+        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" class="bg-image__mobile-backup">
+      </picture>
+      <section class="signup-form__text">
+        <h1 class="signup-form__main-title">Stay updated!</h1>
+        <p class="signup-form__description stats">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul role="list">
+          <li class="stats">Product discovery and building what matters</li>
+          <li class="stats">Measuring to ensure updates are a success</li>
+          <li class="stats">And much more!</li>
+        </ul>
+        <form action="/" class="signup-form__form">
+          <div class="form__grid">
+            <div class="form__min-flex">
+              <label for="email">Email address</label>
+              <input placeholder="email@company.com" type="email">
+            </div>
+            <button class="form__button">Subscribe to monthly newsletter</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  
+    <!-- Sign-up form end -->
+  
+    <!-- Success message start -->
+  <section class="success-message__container" id="win">
+      Thanks for subscribing!
+  
+      A confirmation email has been sent to ash@loremcompany.com.
+      Please open it and click the button inside to confirm your subscription.
+  
+      Dismiss message
+  </section>
+</main>
 </body>
 </html>
