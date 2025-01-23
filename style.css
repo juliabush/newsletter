@@ -56,6 +56,11 @@
 
   html {
     height: 100%;
+    font-family: var(--ff-main);
+    font-size: var(--ff-size);
+    font-weight: var(--fw-mid);
+    color: var(--clr-CharcoalGrey);
+    word-spacing: 1px;
   }
   main {
     height: 100%;
@@ -66,11 +71,7 @@
   }
   .signup-form__text {
     padding: 2rem;
-    font-family: var(--ff-main);
-    font-size: var(--ff-size);
-    font-weight: var(--fw-mid);
-    color: var(--clr-CharcoalGrey);
-    word-spacing: 1px;
+   
   }
   .signup-form__main-title {
     font-size: 2rem;
@@ -97,7 +98,7 @@ li {
 ul li::before {
     content: url(/assets/images/icon-list.svg);
 }
-  .success-message__container {
+  .hidden {
     display: none;
   }
   .form__min-flex {
@@ -133,7 +134,29 @@ ul li::before {
   button:hover {
     background: linear-gradient(to right, var(--clr-Tomato), rgb(255, 208, 0));
   }
-  @media (min-width:375px) and (max-width:600px) {
+  .red {
+    background-color: rgba(255, 0, 0, 0.295);
+    border: 1px solid red;
+  }
+  .red-text {
+    color: red;
+  }
+  .success-message__container {
+    display: grid;
+    padding: 2rem;
+    margin-top: 6rem;
+    gap: 1rem;
+  }
+  .success-message__description {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .success-message__button {
+    margin-top: 12.5rem;
+  }
+  @media (min-width:376px) and (max-width:600px) {
     .bg-image {
         background-color: var(--clr-Tomato);
         background-image: url(/assets/images/illustration-sign-up-desktop.svg);
@@ -141,10 +164,36 @@ ul li::before {
       .bg-image__mobile-backup {
        visibility: hidden;
       }
+
+  .hidden {
+    display: none;
+  }
   }
   @media (min-width:600px) {
     html {
+      height: 100%;
+      display: grid;
+      place-content: center;
         background-color: var(--clr-CharcoalGrey);
+
+    }
+    .success-image {
+      width: 50px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .success-message__description {
+      font-size: 0.9rem;
+    }
+    .success-message__container {
+      margin-top: 0;
+      background-color: white;
+      max-width: 360px;
+      border-radius: 1rem;
+    }
+    .success-message__button {
+      margin-top: 0;
     }
     body {
         height: 100%;
@@ -170,4 +219,8 @@ ul li::before {
         grid-column: 1;
         grid-row: 1;
     }
+
+  .hidden {
+    display: none;
+  }
   }
