@@ -163,6 +163,9 @@ ul li::before {
     .bg-image {
         grid-column: 2;
     }
+    .bg-image__mobile-backup {
+      height: 100%;
+    }
     .signup-form__text {
         grid-column: 1;
         grid-row: 1;
