@@ -4,6 +4,7 @@ const errorMessage = document.getElementById('error');
 const signUpForm = document.getElementById('card-1');
 const successMessage = document.getElementById('card-2');
 const refreshButton = document.getElementById('refresh');
+const displayText = document.getElementById('display');
 
 form.addEventListener('submit', (e) => {
     let messages = []
@@ -22,6 +23,8 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         signUpForm.classList.add('hidden');
         successMessage.classList.remove('hidden');
+        const inputValue = email.value;
+        display.innerText = `A confirmation email has been sent to ${inputValue}. Please open it and click the button inside to confirm your subscription.`;
     }
 })
 refreshButton.addEventListener('click', function() {

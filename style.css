@@ -184,12 +184,12 @@ ul li::before {
       font-size: 2rem;
     }
     .success-message__description {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
     .success-message__container {
       margin-top: 0;
       background-color: white;
-      max-width: 360px;
+      max-width: 380px;
       border-radius: 1rem;
     }
     .success-message__button {
